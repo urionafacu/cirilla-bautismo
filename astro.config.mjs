@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.SITE_URL ?? 'https://cirilla-bautismo.pages.dev',
+	site: 'https://bautismociri.com',
 	vite: {
 		plugins: [tailwindcss()],
 	},

@@ -4,6 +4,8 @@ import '../styles/app.css';
 const title = 'MI BAUTISMO CIRILLA';
 const description = 'Tenemos una alegría muy especial que queremos compartir con vos.';
 const ogImagePath = '/og-bautismo-cirilla-1200x630.jpg';
+const baptismDateIso = '2026-04-19T09:00:00-03:00';
+const mapsUrl = 'https://maps.google.com/?q=Iglesia+a+confirmar';
 
 const pageUrl = new URL('/', Astro.site).toString();
 const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
@@ -39,7 +41,189 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImageUrl} />
 	</head>
-	<body>
-		<h1>{title}</h1>
+	<body data-target-date={baptismDateIso}>
+		<div class="page-shell">
+			<section class="entry-screen" data-entry>
+				<div class="entry-card">
+					<p class="entry-label">Ingreso</p>
+					<p class="entry-name">Cirilla</p>
+					<p class="entry-message">{description}</p>
+					<button class="entry-button" type="button" data-enter-button>INGRESAR</button>
+				</div>
+			</section>
+
+			<main class="landing-screen is-hidden" data-landing aria-hidden="true">
+				<div class="landing-frame">
+					<section class="hero-section">
+						<p class="section-label">Inicio</p>
+						<div class="hero-media">
+							<img
+								src="/background.webp"
+								alt="Retrato de bebé para invitación de bautismo"
+								width="4160"
+								height="2777"
+								fetchpriority="high"
+								loading="eager"
+							/>
+							<div class="hero-copy">
+								<p class="hero-title">MI BAUTISMO</p>
+								<p class="hero-name">Cirilla</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="countdown-wrap" aria-label="Cuenta regresiva para el bautismo">
+						<div class="countdown-grid">
+							<article class="countdown-card">
+								<p class="countdown-value" data-countdown="days">0</p>
+								<p class="countdown-label">Días</p>
+							</article>
+							<article class="countdown-card">
+								<p class="countdown-value" data-countdown="hours">0</p>
+								<p class="countdown-label">Horas</p>
+							</article>
+							<article class="countdown-card">
+								<p class="countdown-value" data-countdown="minutes">0</p>
+								<p class="countdown-label">Minutos</p>
+							</article>
+							<article class="countdown-card">
+								<p class="countdown-value" data-countdown="seconds">0</p>
+								<p class="countdown-label">Segundos</p>
+							</article>
+						</div>
+					</section>
+
+					<section class="message-band">
+						<div class="band-lines">
+							<p>Acompáñame en este momento tan especial.</p>
+						</div>
+					</section>
+
+					<section class="details-stack">
+						<article class="details-card details-card-light">
+							<svg viewBox="0 0 48 48" aria-hidden="true" class="details-icon">
+								<path d="M11 8h2v4h22V8h2v4h5v27H6V12h5V8zm-3 10v19h32V18H8zm8 6h16v2H16v-2z" fill="currentColor"></path>
+							</svg>
+							<p class="details-title">¿Cuándo?</p>
+							<p class="details-text">19 DE ABRIL 2026</p>
+							<p class="details-text">09:00 HS</p>
+						</article>
+
+						<article class="details-card details-card-gold">
+							<svg viewBox="0 0 48 48" aria-hidden="true" class="details-icon">
+								<path d="M23 3h2v5h4v2h-4v2.1l15 8.2V40H28V29h-8v11H8V20.3l15-8.2V10h-4V8h4V3zm15 18.4L24 13.8 10 21.4V38h8V27h12v11h8V21.4z" fill="currentColor"></path>
+							</svg>
+							<p class="details-title">¿Dónde?</p>
+							<p class="details-text">IGLESIA A CONFIRMAR</p>
+						</article>
+					</section>
+
+					<section class="cta-section">
+						<a class="cta-link" href={mapsUrl} target="_blank" rel="noreferrer noopener">CÓMO LLEGAR</a>
+					</section>
+
+					<section class="message-band">
+						<div class="band-lines">
+							<p>¡Me encantaría que nos acompañes!</p>
+						</div>
+					</section>
+
+					<section class="closing-section">
+						<svg viewBox="0 0 48 48" aria-hidden="true" class="heart-icon">
+							<path d="M24 41 6 24c-4.9-4.6-4.9-12.1 0-16.7 4.8-4.6 12.5-4.6 17.3 0L24 8l.7-.7c4.8-4.6 12.5-4.6 17.3 0 4.9 4.6 4.9 12.1 0 16.7L24 41zm-14.3-32c-3.7 3.5-3.7 9.1 0 12.6L24 35.1l14.3-13.5c3.7-3.5 3.7-9.1 0-12.6-3.6-3.4-9.4-3.4-13 0L24 10.4 22.7 9c-3.6-3.4-9.4-3.4-13 0z" fill="currentColor"></path>
+						</svg>
+						<p>TE ESPERO</p>
+					</section>
+				</div>
+			</main>
+
+			<audio data-audio src="/musica-bautismo.mp3" preload="auto" loop></audio>
+			<button class="audio-toggle is-hidden" type="button" data-audio-toggle aria-label="Pausar música" aria-pressed="true">
+				<span class="audio-icon" data-audio-icon>❚❚</span>
+			</button>
+		</div>
+
+		<script is:inline>
+			(() => {
+				const entryScreen = document.querySelector('[data-entry]');
+				const landingScreen = document.querySelector('[data-landing]');
+				const enterButton = document.querySelector('[data-enter-button]');
+				const audioElement = document.querySelector('[data-audio]');
+				const audioToggle = document.querySelector('[data-audio-toggle]');
+				const audioIcon = document.querySelector('[data-audio-icon]');
+				const targetDateRaw = document.body.dataset.targetDate;
+				const targetDate = targetDateRaw ? new Date(targetDateRaw) : null;
+
+				const countdownElements = {
+					days: document.querySelector('[data-countdown="days"]'),
+					hours: document.querySelector('[data-countdown="hours"]'),
+					minutes: document.querySelector('[data-countdown="minutes"]'),
+					seconds: document.querySelector('[data-countdown="seconds"]'),
+				};
+
+				const updateAudioUI = (playing) => {
+					if (!audioToggle || !audioIcon) return;
+					audioIcon.textContent = playing ? '❚❚' : '▶';
+					audioToggle.setAttribute('aria-pressed', String(playing));
+					audioToggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
+				};
+
+				const updateCountdown = () => {
+					if (!targetDate) return;
+
+					const diff = targetDate.getTime() - Date.now();
+					const safeDiff = Math.max(diff, 0);
+
+					const days = Math.floor(safeDiff / 86400000);
+					const hours = Math.floor((safeDiff % 86400000) / 3600000);
+					const minutes = Math.floor((safeDiff % 3600000) / 60000);
+					const seconds = Math.floor((safeDiff % 60000) / 1000);
+
+					if (countdownElements.days) countdownElements.days.textContent = String(days);
+					if (countdownElements.hours) countdownElements.hours.textContent = String(hours);
+					if (countdownElements.minutes) countdownElements.minutes.textContent = String(minutes);
+					if (countdownElements.seconds) countdownElements.seconds.textContent = String(seconds);
+				};
+
+				const playAudio = async () => {
+					if (!audioElement) return;
+					try {
+						await audioElement.play();
+						updateAudioUI(true);
+					} catch {
+						updateAudioUI(false);
+					}
+				};
+
+				if (enterButton && entryScreen && landingScreen) {
+					enterButton.addEventListener('click', async () => {
+						entryScreen.classList.add('is-hidden');
+						landingScreen.classList.remove('is-hidden');
+						landingScreen.setAttribute('aria-hidden', 'false');
+						if (audioToggle) audioToggle.classList.remove('is-hidden');
+						await playAudio();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					});
+				}
+
+				if (audioToggle && audioElement) {
+					audioToggle.addEventListener('click', async () => {
+						if (audioElement.paused) {
+							await playAudio();
+							return;
+						}
+						audioElement.pause();
+						updateAudioUI(false);
+					});
+
+					audioElement.addEventListener('play', () => updateAudioUI(true));
+					audioElement.addEventListener('pause', () => updateAudioUI(false));
+					audioElement.addEventListener('ended', () => updateAudioUI(false));
+				}
+
+				updateCountdown();
+				window.setInterval(updateCountdown, 1000);
+			})();
+		</script>
 	</body>
 </html>
