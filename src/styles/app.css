@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #fef9ef;
+  --color-drop-shadow: #241801;
+  --color-beige: #e9d8bc;
+  --color-beigee: #e9d8bc;
+  --color-gold: #d4ba89;
+
+  --color-background: var(--color-ivory);
+  --color-surface: var(--color-beige);
+  --color-accent: var(--color-gold);
+  --color-ink: var(--color-drop-shadow);
+}

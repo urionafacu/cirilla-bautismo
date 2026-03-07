@@ -1,7 +1,9 @@
 ---
+import '../styles/app.css';
+
 const title = 'MI BAUTISMO CIRILLA';
 const description = 'Tenemos una alegría muy especial que queremos compartir con vos.';
-const ogImagePath = '/og-bautismo-cirilla.jpg';
+const ogImagePath = '/og-bautismo-cirilla-1200x630.jpg';
 
 const pageUrl = new URL('/', Astro.site).toString();
 const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
@@ -13,6 +15,9 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -24,6 +29,9 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={pageUrl} />
 		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta property="og:image:alt" content={title} />
 
 		<meta name="twitter:card" content="summary_large_image" />
