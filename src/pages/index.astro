@@ -41,21 +41,40 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImageUrl} />
 	</head>
-	<body data-target-date={baptismDateIso}>
-		<div class="page-shell">
-			<section class="entry-screen" data-entry>
-				<div class="entry-card">
-					<p class="entry-name">Cirilla</p>
-					<p class="entry-message">{description}</p>
-					<button class="entry-button" type="button" data-enter-button>INGRESAR</button>
+	<body
+		data-target-date={baptismDateIso}
+		class="m-0 min-h-screen bg-ivory font-['Montserrat','Trebuchet_MS',sans-serif] text-ivory"
+	>
+		<div class="relative min-h-screen">
+			<section
+				data-entry
+				class="flex min-h-screen items-center justify-center bg-[color-mix(in_srgb,var(--color-ivory)_97%,white)] px-6"
+			>
+				<div class="flex min-h-screen w-full max-w-[1100px] flex-col items-center justify-center text-center">
+					<p
+						class="font-['Great_Vibes',cursive] text-[clamp(5rem,14vw,8.5rem)] leading-none text-gold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_15%,transparent)]"
+					>
+						Cirilla
+					</p>
+					<p class="mt-10 max-w-[34ch] font-['Quicksand',sans-serif] text-[32px] font-bold text-gold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">
+						{description}
+					</p>
+					<button
+						class="mt-10 rounded-[0.22rem] border border-[color-mix(in_srgb,var(--color-gold)_60%,transparent)] bg-gold px-7 py-2 font-['Quicksand',sans-serif] text-[32px] font-bold tracking-[0.02em] text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_7px_16px_color-mix(in_srgb,var(--color-drop-shadow)_28%,transparent)] hover:brightness-[1.02] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+						type="button"
+						data-enter-button
+					>
+						INGRESAR
+					</button>
 				</div>
 			</section>
 
-			<main class="landing-screen is-hidden" data-landing aria-hidden="true">
-				<div class="landing-frame">
-					<section class="hero-section">
-						<div class="hero-media">
+			<main class="hidden min-h-screen" data-landing aria-hidden="true">
+				<div class="w-full overflow-clip bg-[color-mix(in_srgb,var(--color-ivory)_98%,white)]">
+					<section>
+						<div class="relative aspect-[5/6] overflow-hidden sm:aspect-[4/3]">
 							<img
+								class="h-full w-full object-cover object-center max-[600px]:object-top"
 								src="/background.webp"
 								alt="Retrato de bebé para invitación de bautismo"
 								width="4160"
@@ -63,81 +82,123 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 								fetchpriority="high"
 								loading="eager"
 							/>
-							<div class="hero-copy">
-								<p class="hero-title">MI BAUTISMO</p>
-								<p class="hero-name">Cirilla</p>
+							<div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/20 to-transparent px-4 pb-[10%] pt-20 text-center [text-shadow:0_2px_6px_color-mix(in_srgb,black_40%,transparent)]">
+								<p class="m-0 whitespace-nowrap font-['Quicksand',sans-serif] text-[clamp(1.9rem,7vw,4.2rem)] font-normal leading-none tracking-[3px] uppercase">MI BAUTISMO</p>
+								<p class="mt-6 font-['Great_Vibes',cursive] text-[clamp(2.4rem,8.4vw,4.8rem)] leading-[0.95] text-ivory">Cirilla</p>
 							</div>
 						</div>
 					</section>
 
-					<section class="countdown-wrap" aria-label="Cuenta regresiva para el bautismo">
-						<div class="countdown-grid">
-							<article class="countdown-card">
-								<p class="countdown-value" data-countdown="days">0</p>
-								<p class="countdown-label">Días</p>
+					<section
+						data-reveal
+						data-reveal-delay="0"
+						aria-label="Cuenta regresiva para el bautismo"
+						class="bg-[color-mix(in_srgb,var(--color-ivory)_88%,white)] px-[clamp(0.7rem,4vw,2.8rem)] py-[clamp(2rem,6vw,4rem)]"
+					>
+						<div class="mx-auto grid max-w-[760px] grid-cols-4 gap-[clamp(0.55rem,1.6vw,1.2rem)]">
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="days">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Días</p>
 							</article>
-							<article class="countdown-card">
-								<p class="countdown-value" data-countdown="hours">0</p>
-								<p class="countdown-label">Horas</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="hours">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Horas</p>
 							</article>
-							<article class="countdown-card">
-								<p class="countdown-value" data-countdown="minutes">0</p>
-								<p class="countdown-label">Minutos</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="minutes">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Minutos</p>
 							</article>
-							<article class="countdown-card">
-								<p class="countdown-value" data-countdown="seconds">0</p>
-								<p class="countdown-label">Segundos</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="seconds">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Segundos</p>
 							</article>
 						</div>
 					</section>
 
-					<section class="message-band">
-						<div class="band-lines">
-							<p>Acompáñame en este momento tan especial.</p>
+					<section data-reveal data-reveal-delay="140" class="bg-gold px-[clamp(1rem,4vw,2.4rem)] py-[clamp(2.5rem,7vw,5rem)]">
+						<div class="mx-auto max-w-[900px] text-center text-ivory [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_30%,transparent)]">
+							<div class="mb-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
+								<svg viewBox="0 0 64 64" aria-hidden="true" class="h-7 w-7 shrink-0 text-ivory sm:h-8 sm:w-8" fill="none">
+									<path d="M9 38c5-1 10-4 14-9 2-3 3-7 4-11l4 5 5 1-2 3 4 4 6 1 4-2 3-6 7-3-5 7-6 3 7 5 8 1-9 2-8-2-6-4-6-1-4 5-7 3-9-1-3-2z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M48 28c2-1 4-3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+									<path d="M53 28c2-1 3-3 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+								</svg>
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
+							</div>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[32px] font-medium leading-[1.3]">Mis papás y padrinos me llevan a recibir a Jesús.</p>
+							<div class="mt-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
+								<svg viewBox="0 0 64 64" aria-hidden="true" class="h-7 w-7 shrink-0 text-ivory sm:h-8 sm:w-8" fill="none">
+									<path d="M55 39c-5-1-10-4-14-9-2-3-3-7-4-11l-4 5-5 1 2 3-4 4-6 1-4-2-3-6-7-3 5 7 6 3-7 5-8 1 9 2 8-2 6-4 6-1 4 5 7 3 9-1 3-2z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M16 29c-2-1-4-3-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+									<path d="M11 29c-2-1-3-3-4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+								</svg>
+							</div>
 						</div>
 					</section>
 
-					<section class="details-stack">
-						<article class="details-card details-card-light">
-							<svg viewBox="0 0 48 48" aria-hidden="true" class="details-icon">
+					<section class="grid">
+						<article class="px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-gold bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)]">
+							<svg viewBox="0 0 48 48" aria-hidden="true" class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] rounded-[2px]">
 								<path d="M11 8h2v4h22V8h2v4h5v27H6V12h5V8zm-3 10v19h32V18H8zm8 6h16v2H16v-2z" fill="currentColor"></path>
 							</svg>
-							<p class="details-title">¿Cuándo?</p>
-							<p class="details-text">19 DE ABRIL 2026</p>
-							<p class="details-text">09:00 HS</p>
+							<p class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[32px] font-semibold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">¿Cuándo?</p>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">19 DE ABRIL 2026</p>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">09:00 HS</p>
 						</article>
 
-						<article class="details-card details-card-gold">
-							<svg viewBox="0 0 48 48" aria-hidden="true" class="details-icon">
+						<article data-reveal data-reveal-delay="280" class="bg-gold px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-ivory">
+							<svg viewBox="0 0 48 48" aria-hidden="true" class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] rounded-[2px]">
 								<path d="M23 3h2v5h4v2h-4v2.1l15 8.2V40H28V29h-8v11H8V20.3l15-8.2V10h-4V8h4V3zm15 18.4L24 13.8 10 21.4V38h8V27h12v11h8V21.4z" fill="currentColor"></path>
 							</svg>
-							<p class="details-title">¿Dónde?</p>
-							<p class="details-text">IGLESIA A CONFIRMAR</p>
+							<p class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[32px] font-semibold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">¿Dónde?</p>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">IGLESIA A CONFIRMAR</p>
 						</article>
 					</section>
 
-					<section class="cta-section">
-						<a class="cta-link" href={mapsUrl} target="_blank" rel="noreferrer noopener">CÓMO LLEGAR</a>
+					<section class="bg-[#f4f4f4] px-4 py-[clamp(2rem,6vw,3.5rem)] text-center">
+						<a
+							class="inline-block rounded-[0.24rem] border border-[color-mix(in_srgb,var(--color-gold)_75%,transparent)] bg-[color-mix(in_srgb,var(--color-ivory)_96%,white)] px-[1.3em] py-[0.6em] text-[clamp(1.15rem,2.8vw,2.1rem)] font-bold tracking-[0.02em] text-gold no-underline shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_color-mix(in_srgb,var(--color-drop-shadow)_22%,transparent)] hover:brightness-[1.01] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+							href={mapsUrl}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							CÓMO LLEGAR
+						</a>
 					</section>
 
-					<section class="message-band">
-						<div class="band-lines">
-							<p>¡Me encantaría que nos acompañes!</p>
+					<section class="bg-gold px-[clamp(1rem,4vw,2.4rem)] py-[clamp(2.5rem,7vw,5rem)]">
+						<div class="mx-auto max-w-[900px] text-center text-ivory [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_30%,transparent)]">
+							<div class="mb-[clamp(1.3rem,2.4vw,1.8rem)] h-px bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[32px] font-medium leading-[1.3]">¡Me encantaría que nos acompañes!</p>
+							<div class="mt-[clamp(1.3rem,2.4vw,1.8rem)] h-px bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
 						</div>
 					</section>
 
-					<section class="closing-section">
-						<svg viewBox="0 0 48 48" aria-hidden="true" class="heart-icon">
-							<path d="M24 41 6 24c-4.9-4.6-4.9-12.1 0-16.7 4.8-4.6 12.5-4.6 17.3 0L24 8l.7-.7c4.8-4.6 12.5-4.6 17.3 0 4.9 4.6 4.9 12.1 0 16.7L24 41zm-14.3-32c-3.7 3.5-3.7 9.1 0 12.6L24 35.1l14.3-13.5c3.7-3.5 3.7-9.1 0-12.6-3.6-3.4-9.4-3.4-13 0L24 10.4 22.7 9c-3.6-3.4-9.4-3.4-13 0z" fill="currentColor"></path>
+					<section class="bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)] px-4 pb-[clamp(4rem,10vw,7rem)] pt-[clamp(3rem,9vw,6.2rem)] text-center text-gold">
+						<svg viewBox="0 0 120 116" aria-hidden="true" class="mx-auto h-[122px] w-[122px]" fill="none">
+							<path
+								d="M60 102.5 17.5 60C5.7 48.8 5.7 30.6 17.5 19.4c11.5-11 30.2-11 41.8 0L60 20.2l.7-.8c11.6-11 30.3-11 41.8 0 11.8 11.2 11.8 29.4 0 40.6L60 102.5z"
+								stroke="currentColor"
+								stroke-width="4"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
 						</svg>
-						<p>TE ESPERO</p>
+						<p class="mt-[0.6rem] font-['Quicksand',sans-serif] text-[40px] font-bold tracking-[0.04em]">TE ESPERO</p>
 					</section>
 				</div>
 			</main>
 
 			<audio data-audio src="/musica-bautismo.mp3" preload="auto" loop></audio>
-			<button class="audio-toggle is-hidden" type="button" data-audio-toggle aria-label="Pausar música" aria-pressed="true">
-				<span class="audio-icon" data-audio-icon>❚❚</span>
+			<button
+				class="fixed bottom-[clamp(0.9rem,3vw,1.7rem)] right-[clamp(0.9rem,3vw,1.8rem)] z-40 hidden aspect-square w-[clamp(3.2rem,8vw,4.4rem)] place-items-center rounded-full border-0 bg-gold text-ivory shadow-[0_8px_18px_color-mix(in_srgb,var(--color-drop-shadow)_33%,transparent)] transition duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+				type="button"
+				data-audio-toggle
+				aria-label="Pausar música"
+				aria-pressed="true"
+			>
+				<span class="text-[clamp(1.1rem,3vw,1.5rem)] leading-none" data-audio-icon>❚❚</span>
 			</button>
 		</div>
 
@@ -149,6 +210,7 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 				const audioElement = document.querySelector('[data-audio]');
 				const audioToggle = document.querySelector('[data-audio-toggle]');
 				const audioIcon = document.querySelector('[data-audio-icon]');
+				const revealElements = Array.from(document.querySelectorAll('[data-reveal]'));
 				const targetDateRaw = document.body.dataset.targetDate;
 				const targetDate = targetDateRaw ? new Date(targetDateRaw) : null;
 
@@ -193,12 +255,60 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 					}
 				};
 
+				const setupScrollReveal = () => {
+					if (!revealElements.length || document.body.dataset.revealReady === 'true') return;
+					document.body.dataset.revealReady = 'true';
+
+					const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+					const hiddenClasses = ['opacity-0', 'translate-y-6'];
+					const transitionClasses = ['transition-all', 'duration-[800ms]', 'ease-out'];
+
+					revealElements.forEach((element) => {
+						element.classList.add(...transitionClasses);
+						element.style.transitionDelay = `${Number(element.dataset.revealDelay ?? 0)}ms`;
+
+						if (prefersReducedMotion) {
+							element.classList.add('opacity-100', 'translate-y-0');
+							return;
+						}
+
+						element.classList.add(...hiddenClasses);
+					});
+
+					if (prefersReducedMotion || typeof window.IntersectionObserver === 'undefined') {
+						revealElements.forEach((element) => {
+							element.classList.remove(...hiddenClasses);
+							element.classList.add('opacity-100', 'translate-y-0');
+						});
+						return;
+					}
+
+					const observer = new IntersectionObserver(
+						(entries, obs) => {
+							entries.forEach((entry) => {
+								if (!entry.isIntersecting) return;
+
+								entry.target.classList.remove(...hiddenClasses);
+								entry.target.classList.add('opacity-100', 'translate-y-0');
+								obs.unobserve(entry.target);
+							});
+						},
+						{ threshold: 0.2, rootMargin: '0px 0px -6% 0px' },
+					);
+
+					revealElements.forEach((element) => observer.observe(element));
+				};
+
 				if (enterButton && entryScreen && landingScreen) {
 					enterButton.addEventListener('click', async () => {
-						entryScreen.classList.add('is-hidden');
-						landingScreen.classList.remove('is-hidden');
+						entryScreen.classList.add('hidden');
+						landingScreen.classList.remove('hidden');
 						landingScreen.setAttribute('aria-hidden', 'false');
-						if (audioToggle) audioToggle.classList.remove('is-hidden');
+						setupScrollReveal();
+						if (audioToggle) {
+							audioToggle.classList.remove('hidden');
+							audioToggle.classList.add('grid');
+						}
 						await playAudio();
 						window.scrollTo({ top: 0, behavior: 'smooth' });
 					});
@@ -217,6 +327,10 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 					audioElement.addEventListener('play', () => updateAudioUI(true));
 					audioElement.addEventListener('pause', () => updateAudioUI(false));
 					audioElement.addEventListener('ended', () => updateAudioUI(false));
+				}
+
+				if (!entryScreen || !enterButton || !landingScreen?.classList.contains('hidden')) {
+					setupScrollReveal();
 				}
 
 				updateCountdown();
