@@ -43,7 +43,7 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 	</head>
 	<body
 		data-target-date={baptismDateIso}
-		class="m-0 min-h-screen bg-ivory font-['Montserrat','Trebuchet_MS',sans-serif] text-ivory"
+		class="m-0 min-h-screen bg-ivory font-['Montserrat','Trebuchet_MS',sans-serif] text-ink"
 	>
 		<div class="relative min-h-screen">
 			<section
@@ -52,15 +52,15 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 			>
 				<div class="flex min-h-screen w-full max-w-[1100px] flex-col items-center justify-center text-center">
 					<p
-						class="font-['Great_Vibes',cursive] text-[clamp(5rem,14vw,8.5rem)] leading-none text-gold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_15%,transparent)]"
+						class="font-['Great_Vibes',cursive] text-[clamp(5rem,14vw,8.5rem)] leading-none text-ink [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_12%,transparent)]"
 					>
 						Cirilla
 					</p>
-					<p class="mt-10 max-w-[34ch] font-['Quicksand',sans-serif] text-[32px] font-bold text-gold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">
+					<p class="mt-10 max-w-[34ch] font-['Quicksand',sans-serif] text-[clamp(1.25rem,3.4vw,2rem)] font-bold text-ink">
 						{description}
 					</p>
 					<button
-						class="mt-10 rounded-[0.22rem] border border-[color-mix(in_srgb,var(--color-gold)_60%,transparent)] bg-gold px-7 py-2 font-['Quicksand',sans-serif] text-[32px] font-bold tracking-[0.02em] text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_7px_16px_color-mix(in_srgb,var(--color-drop-shadow)_28%,transparent)] hover:brightness-[1.02] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+						class="mt-10 rounded-[0.22rem] border border-[color-mix(in_srgb,var(--color-gold)_60%,transparent)] bg-gold px-7 py-2 font-['Quicksand',sans-serif] text-[clamp(1.1rem,3vw,1.5rem)] font-bold tracking-[0.02em] text-ink shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_7px_16px_color-mix(in_srgb,var(--color-drop-shadow)_28%,transparent)] hover:brightness-[1.02] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
 						type="button"
 						data-enter-button
 					>
@@ -82,9 +82,9 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 								fetchpriority="high"
 								loading="eager"
 							/>
-							<div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/20 to-transparent px-4 pb-[10%] pt-20 text-center [text-shadow:0_2px_6px_color-mix(in_srgb,black_40%,transparent)]">
-								<p class="m-0 whitespace-nowrap font-['Quicksand',sans-serif] text-[clamp(1.9rem,7vw,4.2rem)] font-normal leading-none tracking-[3px] uppercase">MI BAUTISMO</p>
-								<p class="mt-6 font-['Great_Vibes',cursive] text-[clamp(2.4rem,8.4vw,4.8rem)] leading-[0.95] text-ivory">Cirilla</p>
+							<div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/58 to-transparent px-4 pb-[10%] pt-20 text-center">
+								<h1 class="m-0 whitespace-nowrap font-['Quicksand',sans-serif] text-[clamp(2.1rem,7vw,2.5rem)] font-semibold leading-none tracking-[0.18em] uppercase text-ivory [text-shadow:0_3px_8px_color-mix(in_srgb,black_68%,transparent)]">MI BAUTISMO</h1>
+								<h2 class="mt-6 font-['Great_Vibes',cursive] text-[clamp(2rem,7vw,2.2rem)] leading-[0.95] text-ivory [text-shadow:0_3px_8px_color-mix(in_srgb,black_68%,transparent)]">Cirilla</h2>
 							</div>
 						</div>
 					</section>
@@ -96,69 +96,73 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 						class="bg-[color-mix(in_srgb,var(--color-ivory)_88%,white)] px-[clamp(0.7rem,4vw,2.8rem)] py-[clamp(2rem,6vw,4rem)]"
 					>
 						<div class="mx-auto grid max-w-[760px] grid-cols-4 gap-[clamp(0.55rem,1.6vw,1.2rem)]">
-							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
-								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="days">0</p>
-								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Días</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ink shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(2rem,6vw,3rem)] font-semibold leading-[1.06]" data-countdown="days">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[clamp(0.9rem,2.2vw,1.2rem)] font-bold">Días</p>
 							</article>
-							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
-								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="hours">0</p>
-								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Horas</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ink shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(2rem,6vw,3rem)] font-semibold leading-[1.06]" data-countdown="hours">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[clamp(0.9rem,2.2vw,1.2rem)] font-bold">Horas</p>
 							</article>
-							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
-								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="minutes">0</p>
-								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Minutos</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ink shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(2rem,6vw,3rem)] font-semibold leading-[1.06]" data-countdown="minutes">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[clamp(0.9rem,2.2vw,1.2rem)] font-bold">Minutos</p>
 							</article>
-							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ivory shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
-								<p class="m-0 font-['Quicksand',sans-serif] text-[48px] font-semibold leading-[1.06]" data-countdown="seconds">0</p>
-								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[20px] font-bold">Segundos</p>
+							<article class="rounded-[0.45rem] bg-gold px-[0.3rem] py-[clamp(0.82rem,2vw,1.4rem)] text-center text-ink shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] sm:rounded-[0.8rem]">
+								<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(2rem,6vw,3rem)] font-semibold leading-[1.06]" data-countdown="seconds">0</p>
+								<p class="mt-[0.18rem] font-['Quicksand',sans-serif] text-[clamp(0.9rem,2.2vw,1.2rem)] font-bold">Segundos</p>
 							</article>
 						</div>
 					</section>
 
 					<section data-reveal data-reveal-delay="140" class="bg-gold px-[clamp(1rem,4vw,2.4rem)] py-[clamp(2.5rem,7vw,5rem)]">
-						<div class="mx-auto max-w-[900px] text-center text-ivory [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_30%,transparent)]">
+						<div class="mx-auto max-w-[900px] text-center text-ink">
 							<div class="mb-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
-								<svg viewBox="0 0 64 64" aria-hidden="true" class="h-7 w-7 shrink-0 text-ivory sm:h-8 sm:w-8" fill="none">
-									<path d="M9 38c5-1 10-4 14-9 2-3 3-7 4-11l4 5 5 1-2 3 4 4 6 1 4-2 3-6 7-3-5 7-6 3 7 5 8 1-9 2-8-2-6-4-6-1-4 5-7 3-9-1-3-2z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M48 28c2-1 4-3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-									<path d="M53 28c2-1 3-3 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+								<svg viewBox="0 0 40 40" aria-hidden="true" class="h-9 w-9 shrink-0 text-ink sm:h-10 sm:w-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.0435 5.48017C10.7013 3.22927 11.1885 1.0186 12.3753 1.4946C13.2428 1.84253 14.4851 3.62861 15.6615 7.88069C16.4093 4.61345 17.6659 4.15231 17.992 6.40428C18.6788 11.1468 21.5823 15.3704 21.5636 18.7138C21.589 18.823 21.6214 18.9335 21.6383 19.0413C22.8256 18.966 23.9515 19.0953 24.9647 19.5017C26.1055 19.9592 26.6987 20.9456 26.7527 21.7632L27.2598 22.6181C27.5935 22.2898 27.9465 21.9849 28.3138 21.7039C28.5359 21.5328 28.7626 21.3677 28.9936 21.2089C28.8464 20.9665 28.1172 19.6907 28.5887 18.8789C29.1124 17.9798 29.1669 17.8906 29.3473 17.3816C29.3473 17.3816 30.2597 18.2662 29.5484 19.4138C28.9492 20.3815 28.9855 21.0188 29.0116 21.1969C29.4196 20.9164 29.8421 20.6577 30.2775 20.4218C30.181 19.9533 29.979 18.6562 30.5621 18.0825C31.2811 17.3754 31.3549 17.306 31.6556 16.8635C31.6556 16.8635 32.248 18.0687 31.2918 18.9554C30.6414 19.5597 30.4281 20.0954 30.356 20.3796C30.7657 20.1605 31.1881 19.966 31.621 19.797C32.0054 19.3775 32.8506 18.567 33.4498 18.8083C34.248 19.1289 34.3266 19.1645 34.7739 19.2141C34.7739 19.2141 34.0464 20.5294 33.0262 20.0697C32.444 19.8074 32.0077 19.8339 31.7358 19.9037C31.2812 20.1102 30.8255 20.3386 30.3903 20.6064C30.361 20.624 30.333 20.6446 30.3044 20.6619C30.7308 20.7647 31.7897 21.099 31.844 21.8955C31.9115 22.8958 31.9149 22.9967 32.0525 23.4761C32.0525 23.4761 30.7737 23.5668 30.7248 22.2593C30.688 21.3046 30.3874 20.8755 30.2269 20.7116C29.893 20.9144 29.5656 21.1323 29.2446 21.3651C29.6271 21.6493 30.4147 22.34 30.2504 23.116C30.0359 24.132 30.0111 24.2341 30.0031 24.7577C30.0031 24.7577 28.8197 24.3815 29.1361 23.0661C29.3402 22.2161 29.2421 21.7 29.1472 21.4392C28.922 21.6054 28.6953 21.7701 28.4781 21.9516C28.114 22.2561 27.7719 22.5841 27.4445 22.9295L28.0305 23.9176L27.0403 23.3719C26.3 24.2205 25.6429 25.1599 25.0199 26.1328L24.9888 26.1183C25.3805 25.0082 25.9861 24.036 26.7194 23.1948L25.9936 22.7946C25.5256 22.9149 24.9506 22.9773 24.6994 23.1376C23.901 23.6487 24.2629 27.1337 15.6055 25.805C10.463 25.0157 10.3285 29.2133 8.2108 29.7775C7.83163 29.878 7.54335 29.8588 7.32582 29.7716C6.64103 29.497 6.64198 28.5514 6.64198 28.5514C6.13357 28.5409 5.76395 28.4715 5.49856 28.365C4.25297 27.8655 5.31866 26.5419 5.31866 26.5419C4.947 26.5191 4.67895 26.4646 4.49143 26.3894C3.48426 25.9855 4.78946 24.9802 4.78946 24.9802C4.78946 24.9802 3.62684 24.0811 4.59118 23.4496C5.93561 22.5682 8.36731 24.7343 10.9441 23.184C11.8793 22.6187 12.8333 22.0853 13.8047 21.5848C12.3177 20.2703 9.0731 18.7094 11.4918 18.0052C11.4918 18.0052 8.06564 15.3897 11.2144 15.4682C11.2144 15.4682 6.34854 11.8359 10.8024 12.695C10.8024 12.695 6.54614 7.92431 11.5897 9.64153C11.5898 9.64258 7.21936 4.49032 12.0435 5.48017ZM12.1261 9.188L13.768 11.1273L11.3626 10.3085C10.4761 10.0065 10.0374 9.96592 9.84318 9.97288C9.95436 10.4185 10.6006 11.4125 11.3273 12.2287L12.7095 13.7805L10.6693 13.387C10.2995 13.3155 10.0332 13.2844 9.84468 13.2734C10.1975 13.7059 10.9122 14.3667 11.6347 14.9065L13.4027 16.2277L11.1965 16.1727C10.9514 16.1668 10.783 16.18 10.671 16.1972C10.8744 16.5162 11.3988 17.0497 11.919 17.4477L13.0229 18.293L11.6883 18.6815C11.5568 18.7197 11.4641 18.7557 11.4001 18.7856C11.6617 19.1193 12.4463 19.684 12.9409 20.0399C13.4058 20.3743 13.8863 20.7201 14.27 21.0593L15.0418 21.7416L14.1255 22.2115C13.1684 22.7049 12.2283 23.2305 11.3066 23.7874C9.58594 24.8226 7.9032 24.432 6.67491 24.1475C5.93632 23.9755 5.29877 23.8274 4.97634 24.0395C4.95357 24.0542 4.93644 24.0667 4.92494 24.0769C4.96716 24.1706 5.10089 24.3308 5.21971 24.4249L5.94019 24.9821L5.21869 25.5382C5.13463 25.6029 5.03244 25.7003 4.95088 25.7929C5.08694 25.8178 5.22444 25.8342 5.36256 25.8418L6.69801 25.9284L5.86898 26.9818C5.69068 27.2072 5.56469 27.5365 5.60057 27.6171C5.60552 27.6261 5.64639 27.6678 5.76081 27.7136C5.90134 27.77 6.17042 27.8395 6.65742 27.8505L7.3327 27.8719L7.34583 28.5468C7.34754 28.6748 7.4097 29.0487 7.58851 29.1204C7.64246 29.142 7.77187 29.1682 8.0308 29.0993C8.54449 28.9619 8.96611 28.4169 9.45458 27.7845C10.5143 26.4141 11.9659 24.5362 15.713 25.1112C22.2191 26.1095 23.1675 24.3303 23.6773 23.3742C23.8504 23.0496 24.0138 22.743 24.3215 22.5462C24.6008 22.3673 24.9776 22.2916 25.3763 22.2117C25.5747 22.1715 25.8866 22.1092 26.0424 22.047C26.1287 21.5609 25.7811 20.5866 24.7034 20.1544C23.8425 19.8091 22.8262 19.6708 21.6835 19.7433L21.0462 19.7836L20.9448 19.1536C20.7149 17.7245 19.5632 16.0641 18.3426 14.3059C17.0023 12.3739 15.6156 10.3764 15.0145 8.17675C13.8344 3.86208 12.6352 2.35641 12.1136 2.1472C12.104 2.14336 12.0956 2.14034 12.0884 2.13812C11.8975 2.36357 11.7262 3.57516 12.6474 5.12035L13.4636 6.48909L11.9021 6.16891C10.751 5.93248 10.4925 6.14394 10.4921 6.14481C10.3205 6.44313 11.0407 7.90623 12.1261 9.188Z" fill="currentColor"></path>
+									<path d="M24.7319 21.5719C24.4695 21.4667 24.3421 21.1686 24.4474 20.9063C24.5526 20.6439 24.8506 20.5165 25.113 20.6217C25.3754 20.7269 25.5028 21.025 25.3975 21.2873C25.2923 21.5497 24.9943 21.6771 24.7319 21.5719Z" fill="currentColor"></path>
 								</svg>
-								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ink)_35%,transparent)]"></div>
 							</div>
-							<p class="m-0 font-['Quicksand',sans-serif] text-[32px] font-medium leading-[1.3]">Mis papás y padrinos me llevan a recibir a Jesús.</p>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(1.35rem,3.8vw,2rem)] font-semibold leading-[1.3]">Mis papás y padrinos me llevan a recibir a Jesús.</p>
 							<div class="mt-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
-								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
-								<svg viewBox="0 0 64 64" aria-hidden="true" class="h-7 w-7 shrink-0 text-ivory sm:h-8 sm:w-8" fill="none">
-									<path d="M55 39c-5-1-10-4-14-9-2-3-3-7-4-11l-4 5-5 1 2 3-4 4-6 1-4-2-3-6-7-3 5 7 6 3-7 5-8 1 9 2 8-2 6-4 6-1 4 5 7 3 9-1 3-2z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M16 29c-2-1-4-3-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-									<path d="M11 29c-2-1-3-3-4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ink)_35%,transparent)]"></div>
+								<svg viewBox="0 0 40 40" aria-hidden="true" class="h-9 w-9 shrink-0 -scale-x-100 text-ink sm:h-10 sm:w-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.0435 5.48017C10.7013 3.22927 11.1885 1.0186 12.3753 1.4946C13.2428 1.84253 14.4851 3.62861 15.6615 7.88069C16.4093 4.61345 17.6659 4.15231 17.992 6.40428C18.6788 11.1468 21.5823 15.3704 21.5636 18.7138C21.589 18.823 21.6214 18.9335 21.6383 19.0413C22.8256 18.966 23.9515 19.0953 24.9647 19.5017C26.1055 19.9592 26.6987 20.9456 26.7527 21.7632L27.2598 22.6181C27.5935 22.2898 27.9465 21.9849 28.3138 21.7039C28.5359 21.5328 28.7626 21.3677 28.9936 21.2089C28.8464 20.9665 28.1172 19.6907 28.5887 18.8789C29.1124 17.9798 29.1669 17.8906 29.3473 17.3816C29.3473 17.3816 30.2597 18.2662 29.5484 19.4138C28.9492 20.3815 28.9855 21.0188 29.0116 21.1969C29.4196 20.9164 29.8421 20.6577 30.2775 20.4218C30.181 19.9533 29.979 18.6562 30.5621 18.0825C31.2811 17.3754 31.3549 17.306 31.6556 16.8635C31.6556 16.8635 32.248 18.0687 31.2918 18.9554C30.6414 19.5597 30.4281 20.0954 30.356 20.3796C30.7657 20.1605 31.1881 19.966 31.621 19.797C32.0054 19.3775 32.8506 18.567 33.4498 18.8083C34.248 19.1289 34.3266 19.1645 34.7739 19.2141C34.7739 19.2141 34.0464 20.5294 33.0262 20.0697C32.444 19.8074 32.0077 19.8339 31.7358 19.9037C31.2812 20.1102 30.8255 20.3386 30.3903 20.6064C30.361 20.624 30.333 20.6446 30.3044 20.6619C30.7308 20.7647 31.7897 21.099 31.844 21.8955C31.9115 22.8958 31.9149 22.9967 32.0525 23.4761C32.0525 23.4761 30.7737 23.5668 30.7248 22.2593C30.688 21.3046 30.3874 20.8755 30.2269 20.7116C29.893 20.9144 29.5656 21.1323 29.2446 21.3651C29.6271 21.6493 30.4147 22.34 30.2504 23.116C30.0359 24.132 30.0111 24.2341 30.0031 24.7577C30.0031 24.7577 28.8197 24.3815 29.1361 23.0661C29.3402 22.2161 29.2421 21.7 29.1472 21.4392C28.922 21.6054 28.6953 21.7701 28.4781 21.9516C28.114 22.2561 27.7719 22.5841 27.4445 22.9295L28.0305 23.9176L27.0403 23.3719C26.3 24.2205 25.6429 25.1599 25.0199 26.1328L24.9888 26.1183C25.3805 25.0082 25.9861 24.036 26.7194 23.1948L25.9936 22.7946C25.5256 22.9149 24.9506 22.9773 24.6994 23.1376C23.901 23.6487 24.2629 27.1337 15.6055 25.805C10.463 25.0157 10.3285 29.2133 8.2108 29.7775C7.83163 29.878 7.54335 29.8588 7.32582 29.7716C6.64103 29.497 6.64198 28.5514 6.64198 28.5514C6.13357 28.5409 5.76395 28.4715 5.49856 28.365C4.25297 27.8655 5.31866 26.5419 5.31866 26.5419C4.947 26.5191 4.67895 26.4646 4.49143 26.3894C3.48426 25.9855 4.78946 24.9802 4.78946 24.9802C4.78946 24.9802 3.62684 24.0811 4.59118 23.4496C5.93561 22.5682 8.36731 24.7343 10.9441 23.184C11.8793 22.6187 12.8333 22.0853 13.8047 21.5848C12.3177 20.2703 9.0731 18.7094 11.4918 18.0052C11.4918 18.0052 8.06564 15.3897 11.2144 15.4682C11.2144 15.4682 6.34854 11.8359 10.8024 12.695C10.8024 12.695 6.54614 7.92431 11.5897 9.64153C11.5898 9.64258 7.21936 4.49032 12.0435 5.48017ZM12.1261 9.188L13.768 11.1273L11.3626 10.3085C10.4761 10.0065 10.0374 9.96592 9.84318 9.97288C9.95436 10.4185 10.6006 11.4125 11.3273 12.2287L12.7095 13.7805L10.6693 13.387C10.2995 13.3155 10.0332 13.2844 9.84468 13.2734C10.1975 13.7059 10.9122 14.3667 11.6347 14.9065L13.4027 16.2277L11.1965 16.1727C10.9514 16.1668 10.783 16.18 10.671 16.1972C10.8744 16.5162 11.3988 17.0497 11.919 17.4477L13.0229 18.293L11.6883 18.6815C11.5568 18.7197 11.4641 18.7557 11.4001 18.7856C11.6617 19.1193 12.4463 19.684 12.9409 20.0399C13.4058 20.3743 13.8863 20.7201 14.27 21.0593L15.0418 21.7416L14.1255 22.2115C13.1684 22.7049 12.2283 23.2305 11.3066 23.7874C9.58594 24.8226 7.9032 24.432 6.67491 24.1475C5.93632 23.9755 5.29877 23.8274 4.97634 24.0395C4.95357 24.0542 4.93644 24.0667 4.92494 24.0769C4.96716 24.1706 5.10089 24.3308 5.21971 24.4249L5.94019 24.9821L5.21869 25.5382C5.13463 25.6029 5.03244 25.7003 4.95088 25.7929C5.08694 25.8178 5.22444 25.8342 5.36256 25.8418L6.69801 25.9284L5.86898 26.9818C5.69068 27.2072 5.56469 27.5365 5.60057 27.6171C5.60552 27.6261 5.64639 27.6678 5.76081 27.7136C5.90134 27.77 6.17042 27.8395 6.65742 27.8505L7.3327 27.8719L7.34583 28.5468C7.34754 28.6748 7.4097 29.0487 7.58851 29.1204C7.64246 29.142 7.77187 29.1682 8.0308 29.0993C8.54449 28.9619 8.96611 28.4169 9.45458 27.7845C10.5143 26.4141 11.9659 24.5362 15.713 25.1112C22.2191 26.1095 23.1675 24.3303 23.6773 23.3742C23.8504 23.0496 24.0138 22.743 24.3215 22.5462C24.6008 22.3673 24.9776 22.2916 25.3763 22.2117C25.5747 22.1715 25.8866 22.1092 26.0424 22.047C26.1287 21.5609 25.7811 20.5866 24.7034 20.1544C23.8425 19.8091 22.8262 19.6708 21.6835 19.7433L21.0462 19.7836L20.9448 19.1536C20.7149 17.7245 19.5632 16.0641 18.3426 14.3059C17.0023 12.3739 15.6156 10.3764 15.0145 8.17675C13.8344 3.86208 12.6352 2.35641 12.1136 2.1472C12.104 2.14336 12.0956 2.14034 12.0884 2.13812C11.8975 2.36357 11.7262 3.57516 12.6474 5.12035L13.4636 6.48909L11.9021 6.16891C10.751 5.93248 10.4925 6.14394 10.4921 6.14481C10.3205 6.44313 11.0407 7.90623 12.1261 9.188Z" fill="currentColor"></path>
+									<path d="M24.7319 21.5719C24.4695 21.4667 24.3421 21.1686 24.4474 20.9063C24.5526 20.6439 24.8506 20.5165 25.113 20.6217C25.3754 20.7269 25.5028 21.025 25.3975 21.2873C25.2923 21.5497 24.9943 21.6771 24.7319 21.5719Z" fill="currentColor"></path>
 								</svg>
 							</div>
 						</div>
 					</section>
 
 					<section class="grid">
-						<article class="px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-gold bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)]">
-							<svg viewBox="0 0 48 48" aria-hidden="true" class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] rounded-[2px]">
-								<path d="M11 8h2v4h22V8h2v4h5v27H6V12h5V8zm-3 10v19h32V18H8zm8 6h16v2H16v-2z" fill="currentColor"></path>
-							</svg>
-							<p class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[32px] font-semibold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">¿Cuándo?</p>
-							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">19 DE ABRIL 2026</p>
-							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">09:00 HS</p>
+						<article class="px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-ink bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)]">
+							<img
+								src="/calendar.gif"
+								alt=""
+								aria-hidden="true"
+								class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] object-contain [filter:brightness(0)_saturate(100%)_invert(16%)_sepia(19%)_saturate(1548%)_hue-rotate(341deg)_brightness(94%)_contrast(91%)]"
+							/>
+							<h3 class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[clamp(1.55rem,4vw,1.8rem)] font-semibold">¿Cuándo?</h3>
+							<h4 class="m-0 font-['Quicksand',sans-serif] text-[clamp(1.35rem,3.8vw,1.5rem)] font-bold leading-[1.25] tracking-[0.02em]">19 DE ABRIL 2026</h4>
+							<h4 class="m-0 font-['Quicksand',sans-serif] text-[clamp(1.35rem,3.8vw,1.5rem)] font-bold leading-[1.25] tracking-[0.02em]">09:00 HS</h4>
 						</article>
 
-						<article data-reveal data-reveal-delay="280" class="bg-gold px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-ivory">
-							<svg viewBox="0 0 48 48" aria-hidden="true" class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] rounded-[2px]">
-								<path d="M23 3h2v5h4v2h-4v2.1l15 8.2V40H28V29h-8v11H8V20.3l15-8.2V10h-4V8h4V3zm15 18.4L24 13.8 10 21.4V38h8V27h12v11h8V21.4z" fill="currentColor"></path>
-							</svg>
-							<p class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[32px] font-semibold [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_5%,transparent)]">¿Dónde?</p>
-							<p class="m-0 font-['Quicksand',sans-serif] text-[36px] font-bold leading-[1.25] tracking-[0.02em]">IGLESIA A CONFIRMAR</p>
+						<article data-reveal data-reveal-delay="280" class="bg-gold px-[clamp(1rem,3vw,2rem)] py-[clamp(3rem,8vw,5.4rem)] text-center text-ink">
+							<img
+								src="/pin.gif"
+								alt=""
+								aria-hidden="true"
+								class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)] object-contain [filter:brightness(0)_saturate(100%)_invert(16%)_sepia(19%)_saturate(1548%)_hue-rotate(341deg)_brightness(94%)_contrast(91%)]"
+							/>
+							<h3 class="mt-3 mb-2 font-['Quicksand',sans-serif] text-[clamp(1.55rem,4vw,1.8rem)] font-semibold">¿Dónde?</h3>
+							<h4 class="m-0 font-['Quicksand',sans-serif] text-[clamp(1.35rem,3.8vw,1.5rem)] font-bold leading-[1.25] tracking-[0.02em]">IGLESIA A CONFIRMAR</h4>
 						</article>
 					</section>
 
 					<section class="bg-[#f4f4f4] px-4 py-[clamp(2rem,6vw,3.5rem)] text-center">
 						<a
-							class="inline-block rounded-[0.24rem] border border-[color-mix(in_srgb,var(--color-gold)_75%,transparent)] bg-[color-mix(in_srgb,var(--color-ivory)_96%,white)] px-[1.3em] py-[0.6em] text-[clamp(1.15rem,2.8vw,2.1rem)] font-bold tracking-[0.02em] text-gold no-underline shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_color-mix(in_srgb,var(--color-drop-shadow)_22%,transparent)] hover:brightness-[1.01] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+							class="inline-block rounded-[0.24rem] border border-[color-mix(in_srgb,var(--color-gold)_75%,transparent)] bg-[color-mix(in_srgb,var(--color-ivory)_96%,white)] px-[1.3em] py-[0.6em] text-[clamp(1.15rem,2.8vw,1.5rem)] font-bold tracking-[0.02em] text-ink no-underline shadow-[0_4px_12px_color-mix(in_srgb,var(--color-drop-shadow)_20%,transparent)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_color-mix(in_srgb,var(--color-drop-shadow)_22%,transparent)] hover:brightness-[1.01] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
 							href={mapsUrl}
 							target="_blank"
 							rel="noreferrer noopener"
@@ -168,15 +172,25 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 					</section>
 
 					<section class="bg-gold px-[clamp(1rem,4vw,2.4rem)] py-[clamp(2.5rem,7vw,5rem)]">
-						<div class="mx-auto max-w-[900px] text-center text-ivory [text-shadow:0_2px_5px_color-mix(in_srgb,var(--color-drop-shadow)_30%,transparent)]">
-							<div class="mb-[clamp(1.3rem,2.4vw,1.8rem)] h-px bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
-							<p class="m-0 font-['Quicksand',sans-serif] text-[32px] font-medium leading-[1.3]">¡Me encantaría que nos acompañes!</p>
-							<div class="mt-[clamp(1.3rem,2.4vw,1.8rem)] h-px bg-[color-mix(in_srgb,var(--color-ivory)_70%,transparent)]"></div>
+						<div class="mx-auto max-w-[900px] text-center text-ink">
+							<div class="mb-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
+								<svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 shrink-0 text-ink sm:h-7 sm:w-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.25 21.0689H21.75M12 18.4969V2.93091M7.2335 7.10341H16.7665M9.2075 18.7239L4.2775 15.9244M14.7925 18.7239L19.7225 15.9244M10.49 20.2189L2.4765 19.8249L2.784 17.5539L10.49 20.2189ZM13.51 20.2189L21.524 19.8249L21.2165 17.5539L13.51 20.2189Z" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ink)_35%,transparent)]"></div>
+							</div>
+							<p class="m-0 font-['Quicksand',sans-serif] text-[clamp(1.35rem,3.8vw,2rem)] font-semibold leading-[1.3]">¡Me encantaría que nos acompañes!</p>
+							<div class="mt-[clamp(1.3rem,2.4vw,1.8rem)] flex items-center gap-2">
+								<div class="h-px flex-1 bg-[color-mix(in_srgb,var(--color-ink)_35%,transparent)]"></div>
+								<svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 shrink-0 -scale-x-100 text-ink sm:h-7 sm:w-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.25 21.0689H21.75M12 18.4969V2.93091M7.2335 7.10341H16.7665M9.2075 18.7239L4.2775 15.9244M14.7925 18.7239L19.7225 15.9244M10.49 20.2189L2.4765 19.8249L2.784 17.5539L10.49 20.2189ZM13.51 20.2189L21.524 19.8249L21.2165 17.5539L13.51 20.2189Z" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
 						</div>
 					</section>
 
-					<section class="bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)] px-4 pb-[clamp(4rem,10vw,7rem)] pt-[clamp(3rem,9vw,6.2rem)] text-center text-gold">
-						<svg viewBox="0 0 120 116" aria-hidden="true" class="mx-auto h-[122px] w-[122px]" fill="none">
+					<section class="bg-[color-mix(in_srgb,var(--color-ivory)_92%,white)] px-4 pb-[clamp(4rem,10vw,7rem)] pt-[clamp(3rem,9vw,6.2rem)] text-center text-ink">
+						<svg viewBox="0 0 120 116" aria-hidden="true" class="mx-auto h-[clamp(3rem,7vw,5rem)] w-[clamp(3rem,7vw,5rem)]" fill="none">
 							<path
 								d="M60 102.5 17.5 60C5.7 48.8 5.7 30.6 17.5 19.4c11.5-11 30.2-11 41.8 0L60 20.2l.7-.8c11.6-11 30.3-11 41.8 0 11.8 11.2 11.8 29.4 0 40.6L60 102.5z"
 								stroke="currentColor"
@@ -185,27 +199,27 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 								stroke-linejoin="round"
 							></path>
 						</svg>
-						<p class="mt-[0.6rem] font-['Quicksand',sans-serif] text-[40px] font-bold tracking-[0.04em]">TE ESPERO</p>
+						<p class="mt-[0.6rem] font-['Quicksand',sans-serif] text-[calc(clamp(1.8rem,5vw,2.5rem)-2px)] font-bold tracking-[0.04em]">TE ESPERO</p>
 					</section>
 				</div>
 			</main>
 
 			<audio data-audio src="/musica-bautismo.mp3" preload="auto" loop></audio>
 			<button
-				class="fixed bottom-[clamp(0.9rem,3vw,1.7rem)] right-[clamp(0.9rem,3vw,1.8rem)] z-40 hidden aspect-square w-[clamp(3.2rem,8vw,4.4rem)] place-items-center rounded-full border-0 bg-gold text-ivory shadow-[0_8px_18px_color-mix(in_srgb,var(--color-drop-shadow)_33%,transparent)] transition duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
+				class="fixed bottom-[clamp(0.9rem,3vw,1.7rem)] right-[clamp(0.9rem,3vw,1.8rem)] z-40 hidden aspect-square w-[clamp(3.2rem,8vw,4.4rem)] place-items-center rounded-full border-0 bg-gold text-ink shadow-[0_8px_18px_color-mix(in_srgb,var(--color-drop-shadow)_33%,transparent)] transition duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[color-mix(in_srgb,var(--color-gold)_65%,white)]"
 				type="button"
 				data-audio-toggle
 				aria-label="Pausar música"
 				aria-pressed="true"
 			>
 				<span data-audio-icon-pause aria-hidden="true">
-					<svg viewBox="0 0 24 24" class="h-[clamp(1.15rem,2.8vw,1.45rem)] w-[clamp(1.15rem,2.8vw,1.45rem)] fill-current" role="presentation">
+					<svg viewBox="0 0 24 24" class="h-[calc(clamp(1.15rem,2.8vw,1.45rem)+1.5px)] w-[calc(clamp(1.15rem,2.8vw,1.45rem)+1.5px)] fill-current" role="presentation">
 						<rect x="6" y="4" width="4" height="16" rx="1"></rect>
 						<rect x="14" y="4" width="4" height="16" rx="1"></rect>
 					</svg>
 				</span>
 				<span data-audio-icon-play class="hidden" aria-hidden="true">
-					<svg viewBox="0 0 24 24" class="h-[clamp(1.15rem,2.8vw,1.45rem)] w-[clamp(1.15rem,2.8vw,1.45rem)] fill-current" role="presentation">
+					<svg viewBox="0 0 24 24" class="h-[calc(clamp(1.15rem,2.8vw,1.45rem)+1.5px)] w-[calc(clamp(1.15rem,2.8vw,1.45rem)+1.5px)] fill-current" role="presentation">
 						<path d="M8 5.5v13l10-6.5-10-6.5z"></path>
 					</svg>
 				</span>

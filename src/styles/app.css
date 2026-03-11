@@ -6,9 +6,63 @@
   --color-drop-shadow: #241801;
   --color-beige: #e9d8bc;
   --color-gold: #d4ba89;
+  --color-ink-strong: #4b2f1f;
 
   --color-background: var(--color-ivory);
   --color-surface: var(--color-beige);
   --color-accent: var(--color-gold);
-  --color-ink: var(--color-drop-shadow);
+  --color-ink: var(--color-ink-strong);
+}
+
+@layer base {
+  :root {
+    --text-body: 1rem;
+    --step-h4: 1.5rem;
+    --step-h3: 1.8rem;
+    --step-h2: 2.2rem;
+    --step-h1: 2.5rem;
+  }
+
+  body {
+    color: var(--color-ink);
+  }
+
+  p {
+    font-size: var(--text-body);
+    line-height: 1.5;
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: var(--step-h1);
+  }
+
+  h2 {
+    font-size: var(--step-h2);
+  }
+
+  h3 {
+    font-size: var(--step-h3);
+  }
+
+  h4 {
+    font-size: var(--step-h4);
+  }
+
+  @media (max-width: 375px) {
+    :root {
+      --step-h4: 1.35rem;
+      --step-h3: 1.6rem;
+      --step-h2: 2rem;
+      --step-h1: 2.25rem;
+    }
+  }
 }
