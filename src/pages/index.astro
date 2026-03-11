@@ -198,7 +198,17 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 				aria-label="Pausar música"
 				aria-pressed="true"
 			>
-				<span class="text-[clamp(1.1rem,3vw,1.5rem)] leading-none" data-audio-icon>❚❚</span>
+				<span data-audio-icon-pause aria-hidden="true">
+					<svg viewBox="0 0 24 24" class="h-[clamp(1.15rem,2.8vw,1.45rem)] w-[clamp(1.15rem,2.8vw,1.45rem)] fill-current" role="presentation">
+						<rect x="6" y="4" width="4" height="16" rx="1"></rect>
+						<rect x="14" y="4" width="4" height="16" rx="1"></rect>
+					</svg>
+				</span>
+				<span data-audio-icon-play class="hidden" aria-hidden="true">
+					<svg viewBox="0 0 24 24" class="h-[clamp(1.15rem,2.8vw,1.45rem)] w-[clamp(1.15rem,2.8vw,1.45rem)] fill-current" role="presentation">
+						<path d="M8 5.5v13l10-6.5-10-6.5z"></path>
+					</svg>
+				</span>
 			</button>
 		</div>
 
@@ -209,7 +219,8 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 				const enterButton = document.querySelector('[data-enter-button]');
 				const audioElement = document.querySelector('[data-audio]');
 				const audioToggle = document.querySelector('[data-audio-toggle]');
-				const audioIcon = document.querySelector('[data-audio-icon]');
+				const audioIconPlay = document.querySelector('[data-audio-icon-play]');
+				const audioIconPause = document.querySelector('[data-audio-icon-pause]');
 				const revealElements = Array.from(document.querySelectorAll('[data-reveal]'));
 				const targetDateRaw = document.body.dataset.targetDate;
 				const targetDate = targetDateRaw ? new Date(targetDateRaw) : null;
@@ -222,8 +233,9 @@ const ogImageUrl = new URL(ogImagePath, Astro.site).toString();
 				};
 
 				const updateAudioUI = (playing) => {
-					if (!audioToggle || !audioIcon) return;
-					audioIcon.textContent = playing ? '❚❚' : '▶';
+					if (!audioToggle || !audioIconPlay || !audioIconPause) return;
+					audioIconPlay.classList.toggle('hidden', playing);
+					audioIconPause.classList.toggle('hidden', !playing);
 					audioToggle.setAttribute('aria-pressed', String(playing));
 					audioToggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
 				};
